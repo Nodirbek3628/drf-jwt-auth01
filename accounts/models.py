@@ -8,7 +8,8 @@ class CustomUser(AbstractUser):
         USER = 'USER','User'
         MANAGER = 'MANAGER','Manager'
         
-    role = models.CharField(max_length=15,choices=Role.choices,default=Role.USER)
+    role            = models.CharField(max_length=15,choices=Role.choices,default=Role.USER)
+    profile_picture = models.FileField(null=True,blank=True)
     
     
     @property
