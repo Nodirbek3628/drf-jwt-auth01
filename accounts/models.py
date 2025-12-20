@@ -20,5 +20,5 @@ class CustomUser(AbstractUser):
         return self.role == self.Role.USER
     
     @property
-    def is_user(self)->bool:
-        return self.role == self.Role.USER
+    def is_manager(self)->bool:
+        return self.role == self.Role.MANAGER
